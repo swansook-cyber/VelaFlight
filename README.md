@@ -15,6 +15,7 @@ A single-page web app showing every aircraft transmitting ADS-B or Mode-S, anywh
 - 3D terrain with adjustable tilt + chase cam
 - Dark Carto basemap, weather radar overlay, night-side shading
 - Heatmap, contrail trails, motion smoothing (rAF dead-reckoning)
+- Hidden tabs back off live polling and refetch instantly on return — kinder to the community feed and your battery
 
 **Aircraft details**
 - Routes (origin → destination with airport names)

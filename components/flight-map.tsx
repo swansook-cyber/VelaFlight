@@ -1953,10 +1953,22 @@ export default function FlightMap() {
     let timer: ReturnType<typeof setTimeout>
     const tick = async () => {
       if (cancelled) return
+      // Hidden tab: back off instead of hammering the community feed
+      if (typeof document !== 'undefined' && document.hidden) {
+        if (!cancelled) timer = setTimeout(tick, REFRESH_MS * 4)
+        return
+      }
       await fetchOnce()
       if (!cancelled) timer = setTimeout(tick, REFRESH_MS)
     }
     tick()
+    // Fetch immediately when the tab becomes visible again
+    const onVisible = () => {
+      if (cancelled || document.hidden) return
+      clearTimeout(timer)
+      tick()
+    }
+    document.addEventListener('visibilitychange', onVisible)
     const m = mapRef.current
     let moveTimer: ReturnType<typeof setTimeout>
     const onMove = () => {
@@ -1964,7 +1976,7 @@ export default function FlightMap() {
       moveTimer = setTimeout(fetchOnce, 500)
     }
     m?.on('moveend', onMove)
-    return () => { cancelled = true; clearTimeout(timer); clearTimeout(moveTimer); m?.off('moveend', onMove) }
+    return () => { cancelled = true; clearTimeout(timer); clearTimeout(moveTimer); document.removeEventListener('visibilitychange', onVisible); m?.off('moveend', onMove) }
   }, [fetchOnce])
 
   /* ---- Filtered list ---- */
