@@ -1,17 +1,17 @@
 {
-  "name": "Flight Tracker — Live aircraft positions",
-  "short_name": "Flight Tracker",
-  "description": "Real-time global flight tracker. Live aircraft positions, routes, weather, and statistics — free, no signup.",
-  "start_url": "/flight-tracker/",
-  "scope": "/flight-tracker/",
+  "name": "Vela Flight — Live aircraft positions",
+  "short_name": "Vela Flight",
+  "description": "Vela Flight is a real-time aircraft tracker focused on quick mobile use, with routes, weather, and live ADS-B positions.",
+  "start_url": "/VelaFlight/",
+  "scope": "/VelaFlight/",
   "display": "standalone",
   "orientation": "any",
   "background_color": "#020617",
   "theme_color": "#0ea5e9",
   "categories": ["travel", "navigation", "utilities"],
   "icons": [
-    { "src": "/flight-tracker/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
-    { "src": "/flight-tracker/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
-    { "src": "/flight-tracker/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+    { "src": "/VelaFlight/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/VelaFlight/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/VelaFlight/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
   ]
 }
