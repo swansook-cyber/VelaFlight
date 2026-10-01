@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production'
-const repo = 'flight-tracker'
+const repo = 'VelaFlight'
 module.exports = {
   output: 'export',
   images: { unoptimized: true },
