@@ -1,12 +1,12 @@
-# ✈️ Flight Tracker
+# ✈️ Vela Flight
 
-> Real-time global flight tracker. 25,000+ aircraft live. Free, no signup.
+> Vela Flight — lightweight real-time aircraft tracker for occasional personal use, optimized around Thailand and mobile.
 
-**Live:** https://sanjays2402.github.io/flight-tracker/
+**Live:** https://swansook-cyber.github.io/VelaFlight/
 
 A single-page web app showing every aircraft transmitting ADS-B or Mode-S, anywhere on Earth, refreshed every 8 seconds. No servers, no accounts, no analytics, no ads — just a map and the planes in the sky.
 
-![Flight Tracker preview](public/og.svg)
+![Vela Flight preview](public/og.svg)
 
 ## Features
 
@@ -68,8 +68,8 @@ No API keys required.
 ## Develop
 
 ```bash
-git clone https://github.com/Sanjays2402/flight-tracker
-cd flight-tracker
+git clone https://github.com/swansook-cyber/VelaFlight
+cd VelaFlight
 npm install
 npm run dev      # http://localhost:3000
 npm run build    # static export → ./out
@@ -91,4 +91,4 @@ MIT — see [LICENSE](LICENSE)
 
 ---
 
-Built by [@Sanjays2402](https://github.com/Sanjays2402). Issues + PRs welcome.
+Vela Flight is based on the MIT-licensed [Sanjays2402/flight-tracker](https://github.com/Sanjays2402/flight-tracker). Original work by [@Sanjays2402](https://github.com/Sanjays2402).
