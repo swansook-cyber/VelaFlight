@@ -92,3 +92,6 @@ MIT — see [LICENSE](LICENSE)
 ---
 
 Vela Flight is based on the MIT-licensed [Sanjays2402/flight-tracker](https://github.com/Sanjays2402/flight-tracker). Original work by [@Sanjays2402](https://github.com/Sanjays2402).
+
+
+Deployment status: GitHub Pages workflow enabled.
