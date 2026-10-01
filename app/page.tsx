@@ -8,7 +8,7 @@ const FlightMap = dynamic(() => import('@/components/flight-map'), {
       <div className="text-center">
         <div className="inline-flex items-center gap-2 text-sm tracking-widest uppercase text-slate-400">
           <span className="size-2 rounded-full bg-emerald-400 live-dot" />
-          Loading flight data
+          กำลังโหลดข้อมูลเที่ยวบิน
         </div>
       </div>
     </div>
