@@ -381,7 +381,7 @@ import CcfpMonitor from './ccfp-monitor'
 import SigwxChart from './sigwx-chart'
 
 /* ============================================================
-   Flight Tracker — MapLibre GL v5 edition (3D-capable).
+   Vela Flight — MapLibre GL v5 edition (3D-capable).
    Data: adsb.lol (positions, routes, airports), planespotters.net (photos),
          RainViewer (weather radar), built-in day/night terminator.
    ============================================================ */
@@ -1293,9 +1293,9 @@ export default function FlightMap() {
     if (!mapEl.current || mapRef.current) return
 
     const params = new URLSearchParams(window.location.hash.replace(/^#/, ''))
-    const lat = parseFloat(params.get('lat') || '40.7')
-    const lng = parseFloat(params.get('lng') || '-74')
-    const zoom = parseInt(params.get('z') || '6', 10)
+    const lat = parseFloat(params.get('lat') || '8.0991')
+    const lng = parseFloat(params.get('lng') || '98.9862')
+    const zoom = parseInt(params.get('z') || '8', 10)
     const focusIcao = params.get('icao')
     if (focusIcao) initialFocusRef.current = focusIcao.toLowerCase()
 
@@ -1737,7 +1737,7 @@ export default function FlightMap() {
     if (selected) q.set('icao', selected.icao); else q.delete('icao')
     window.history.replaceState(null, '', `#${q.toString()}`)
     if (typeof document !== 'undefined') {
-      document.title = selected ? `${selected.callsign} · ${selected.type} · Flight Tracker` : 'Flight Tracker'
+      document.title = selected ? `${selected.callsign} · ${selected.type} · Vela Flight` : 'Vela Flight'
     }
   }, [selected])
 
@@ -3037,7 +3037,7 @@ export default function FlightMap() {
         <div className="pointer-events-auto bg-slate-950/85 backdrop-blur-xl border border-slate-800 rounded-2xl px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 shadow-2xl flex items-center gap-2 sm:gap-3 min-w-0">
           <PlaneLogo />
           <div className="min-w-0">
-            <div className="hidden xs:block text-sm md:text-base font-bold tracking-tight leading-none">Flight Tracker</div>
+            <div className="hidden xs:block text-sm md:text-base font-bold tracking-tight leading-none">Vela Flight</div>
             <div className="flex items-center gap-1.5 mt-0.5 sm:mt-1 text-[10px] uppercase tracking-widest">
               <span className={`size-1.5 rounded-full ${status==='live'?'bg-emerald-400 live-dot':status==='error'?'bg-rose-500':'bg-amber-400 live-dot'}`} />
               <span className="text-slate-400 truncate max-w-[40vw] sm:max-w-none">
@@ -3890,7 +3890,7 @@ export default function FlightMap() {
             </div>
             <div className="p-5 space-y-4">
               <div className="text-center space-y-1">
-                <h2 className="text-xl font-bold tracking-tight">Welcome to Flight Tracker</h2>
+                <h2 className="text-xl font-bold tracking-tight">Welcome to Vela Flight</h2>
                 <p className="text-sm text-slate-400">25,000+ aircraft. Live, free, no signup.</p>
               </div>
               <div className="grid grid-cols-2 gap-2 text-[11px]">
@@ -3924,7 +3924,7 @@ export default function FlightMap() {
         <div className="fixed inset-0 z-[60] bg-slate-950/80 backdrop-blur-md grid place-items-center p-4 pointer-events-auto" onClick={()=>setAbout(false)}>
           <div onClick={(e)=>e.stopPropagation()} className="w-full max-w-lg max-h-[85vh] overflow-y-auto bg-slate-950 border border-slate-800 rounded-3xl shadow-2xl">
             <header className="sticky top-0 bg-slate-950/95 backdrop-blur border-b border-slate-800 px-5 py-3.5 flex items-center justify-between">
-              <h3 className="text-base font-bold">About Flight Tracker</h3>
+              <h3 className="text-base font-bold">About Vela Flight</h3>
               <button onClick={()=>setAbout(false)} className="size-7 rounded-lg hover:bg-slate-800 grid place-items-center text-slate-400 text-sm">✕</button>
             </header>
             <div className="p-5 space-y-5 text-sm text-slate-300">
